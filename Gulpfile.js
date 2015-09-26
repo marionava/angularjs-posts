@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     jshint  = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     inject  = require('gulp-inject'),
-    wiredep = require('wiredep').stream;
+    wiredep = require('wiredep').stream,
+    templateCache = require('gulp-angular-templatecache');
 
 // Servidor web de desarrollo
 gulp.task('server', function() {
@@ -55,7 +56,7 @@ gulp.task('inject', function() {
 });
 
 // Inyecta las librerias que instalemos vía Bower
-gulp.task('wiredep', function () {
+gulp.task('bower', function () {
   gulp.src('./app/index.html')
     .pipe(wiredep({
       directory: './app/lib'
@@ -82,14 +83,16 @@ gulp.task('watch', function(event) {
         notification('JShint', event);
     });
 
-    var wiredep_watcher = gulp.watch(['./bower.json'], ['wiredep']);
+    var wiredep_watcher = gulp.watch(['./bower.json'], ['bower']);
     wiredep_watcher.on('change', function(event) {
         notification('Bower Insertado', event)
     });
 
 });
 
-gulp.task('default', ['server', 'inject', 'wiredep', 'watch']);
+
+
+gulp.task('default', ['server', 'inject', 'bower', 'watch']);
 
 function notification(msg, event) {
     return gulp.src('').pipe(notify({

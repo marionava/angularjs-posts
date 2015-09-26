@@ -19,8 +19,13 @@
   ],
   "dependencies": {
     "angular": "~1.4.6",
-    "bootstrap": "~3.3.5",
+    "bootstrap": "3.3.4",
     "angular-route": "~1.4.6",
-    "angular-resource": "~1.4.6"
+    "angular-resource": "~1.4.6",
+    "font-awesome": "fontawesome#4.3.0"
+  },
+  "resolutions": {
+    "bootstrap": "3.3.4",
+    "font-awesome": "4.3.0"
   }
 }

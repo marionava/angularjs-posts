@@ -6,13 +6,14 @@
     function config ($locationProvider, $routeProvider) {
         //Permite que las rutas NO lleven el carater # al inicio de ellas
         $locationProvider.html5Mode(true);
+
         $routeProvider
             .when('/', {
                 templateUrl : 'views/post-list.tpl.html',
                 controller : 'PostListController',
                 controllerAs : 'postlist'
             })
-            .when('/post/:postId', {
+            .when('/posts/:postId', {
                 templateUrl : 'views/post-detail.tpl.html',
                 controller : 'PostDetailController',
                 controllerAs : 'postdetail'

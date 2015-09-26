@@ -12,12 +12,14 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
     <!-- bower:css -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/stylesheets/main.css">
     <!-- endinject -->
+    <base href="/">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 </head>
 
@@ -27,9 +29,12 @@
         <![endif]-->
     <!-- Add your site or application content here -->
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <aside class="col-sm-3"></aside>
+            <h1>Posts</h1>
+            <aside class="col-sm-3">
+                <a class="btn btn-primary" ng-href="/new">Crear Entrada</a>
+            </aside>
             <section class="col-sm-9" ng-view></section>
         </div>
     </div>
@@ -43,6 +48,8 @@
     <!-- endbower -->
     <!-- inject:js -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers.js"></script>
+    <script src="/scripts/services.js"></script>
     <!-- endinject -->
 </body>
 
