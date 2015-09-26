@@ -1,20 +1,26 @@
 {
-    "name": "angularjs-posts",
-    "version": "0.0.1",
-    "authors": [
-        "Mario Nava <nava.mario@gmail.com>"
-    ],
-    "description": "Aplicación de ejemplo en Angular JS para un mini blog",
-    "keywords": [
-        "angularjs",
-        "javascript"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ]
+  "name": "angularjs-posts",
+  "version": "0.0.1",
+  "authors": [
+    "Mario Nava <nava.mario@gmail.com>"
+  ],
+  "description": "Aplicación de ejemplo en Angular JS para un mini blog",
+  "keywords": [
+    "angularjs",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "bootstrap": "~3.3.5",
+    "angular-route": "~1.4.6",
+    "angular-resource": "~1.4.6"
+  }
 }
